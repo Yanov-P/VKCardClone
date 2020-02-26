@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  font-family: Roboto;
+  margin: 0;
+  padding: 0;
+}
+
+  body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card{
+    width: 230px;
+    height: 320px;
+    background-color: #333336;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 12px;
+  }
+
+  .card-image{
+    margin-top:17.5px;
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    background-image: url("https://sun9-29.userapi.com/c858324/v858324663/12f660/Phb7jEupeCY.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .card-image:hover{
+    cursor: pointer;
+  }
+
+  .card-image-edit{
+    color: rgb(​ 204, ​ 204, ​ 204);
+    height: 40px;
+    width: 200px;
+    background-color: rgba(51, 51, 51, 0);
+    transition: all .2s;
+    display: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+
+  .card-image:hover > .card-image-edit{
+    height: 65px;
+    background-color: rgba(51, 51, 51, 0.5);
+    display: flex;
+  }
+
+  .card-image > .card-image-edit > div{
+    opacity: 0;
+
+    margin: 3px 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    transition: all .2s;
+  }
+
+
+  .card-image:hover > .card-image-edit > div{
+    color: #CCCCCC;
+    opacity: 1;
+  }
+
+  .card-image:hover > .card-image-edit > div:hover{
+    color: white;
+  }
+ 
+  .card-image > .card-image-edit > div > img{
+    height: 15px;
+    width: 15px;
+    transform: rotate(-90deg);
+
+    margin-right: 10px;
+  }
+
+  .card-image__delete {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(51, 51, 51, 0.5);
+    opacity: 0;
+    border-radius: 2px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-image:hover > .card-image__delete{
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .card-image__delete > div {
+    position: relative;
+    height: 2px;
+    width: 10px;
+    background-color: #CCCCCC;
+    border-radius: 1px;
+  }
+
+  .card-image__delete > div:nth-child(1)  {
+    top: 1px;
+    transform: rotate(45deg);
+  }
+
+  .card-image__delete > div:nth-child(2)  {
+    top: -1px;
+    transform: rotate(-45deg);
+  }
+
+
+  .card-controls{
+    width: 200px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-controls > div{
+    height: 30px;
+    background-color: #444446;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #CCCCCC;
+    
+  }
+
+  .card-controls__edit{
+    flex-grow: 4.8;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .card-controls__more{
+    margin-left: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .card-dropdown{
+    background-color: #555555;
+    width: 200px;
+    height: 0px;
+    z-index: -1;
+    position: absolute;
+    border-radius: 5px;
+    margin-left: -83px;
+    margin-top: -15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+  }
+
+  .card-controls__more:hover > .card-dropdown{
+    height: 120px;
+    margin-top: 45px;
+    transition: all .2s;
+    z-index: 10;
+  }
+
+  .card-dropdown:hover{
+    height: 120px;
+    margin-top: 45px;
+    transition: all .2s;
+    z-index: 10;
+  }
+
+  .card-dropdown > div:first-child{
+    background-color: #666666;
+    height: 28px;
+    border-radius: 5px 5px 0px 0px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .card-dropdown > div{
+    position: relative;
+    z-index: 0;
+    width: 185px;
+    height: 28px;
+
+    padding-left: 15px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .card-dropdown > div:hover{
+    color: white;
+    background-color: #666666;
+  }
+
+  .card-dropdown > div:last-child{
+    border-radius: 5px;
+  }
+
+  .card-controls__more > span{
+    background-color: #CCCCCC;
+    width: 4px;
+    height: 4px;
+    margin: 1px;
+    border-radius: 2px;
+    z-index: 11;
+  }
+
+  .card-privacy{
+    text-align: center;
+    padding-top: 15px;
+    color: #828282;
+  }
+
+  .card-privacy > span{
+    color: white;
+  }
+
+  .card-privacy > span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  
+
+
+
+ 
