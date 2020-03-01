@@ -91,11 +91,16 @@
   }
  
   .card-image > .card-image-edit > div > img{
+    /* background-color: red; */
     height: 15px;
     width: 15px;
-    transform: rotate(-90deg);
-
     margin-right: 10px;
+  }
+
+  .card-image > .card-image-edit > div:first-child > img{
+    transform: rotate(-180deg);
+    height: 13px;
+    width: 13px;
   }
 
   .card-image__delete {
@@ -162,6 +167,10 @@
     z-index: 1;
   }
 
+  .card-controls__edit:hover{
+    background-color: #555555;
+  }
+
   .card-controls__more{
     margin-left: 10px;
     flex-grow: 1;
@@ -170,6 +179,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+  }
+
+  .card-controls__more:hover{
+    background-color: #555555;
   }
 
   .card-dropdown{
@@ -186,15 +199,26 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-
   }
 
-  .card-controls__more:hover > .card-dropdown{
+  
+
+  .card-controls__more:active > .card-dropdown{
     height: 120px;
     margin-top: 45px;
     transition: all .2s;
     z-index: 10;
   }
+
+  .card-controls__more > span{
+    background-color: #CCCCCC;
+    width: 4px;
+    height: 4px;
+    margin: 1px;
+    border-radius: 2px;
+    /* z-index: 11; */
+  }
+
 
   .card-dropdown:hover{
     height: 120px;
@@ -213,6 +237,31 @@
     align-items: center;
     justify-content: space-between;
 
+  }
+
+  .card-dropdown:hover > div:first-child > div{
+    top: 0px;
+    transition: all .2s;
+  }
+
+  .card-dropdown > div:first-child > div{
+    position: relative;
+    top: 8px;
+    /* background-color: red; */
+    width: 18px;
+    margin-right: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-dropdown > div:first-child > div > span{
+    background-color: #CCCCCC;
+    width: 4px;
+    height: 4px;
+    margin: 1px;
+    border-radius: 2px;
   }
 
   .card-dropdown > div{
@@ -238,14 +287,6 @@
     border-radius: 5px;
   }
 
-  .card-controls__more > span{
-    background-color: #CCCCCC;
-    width: 4px;
-    height: 4px;
-    margin: 1px;
-    border-radius: 2px;
-    z-index: 11;
-  }
 
   .card-privacy{
     text-align: center;
